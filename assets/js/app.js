@@ -63,4 +63,4 @@ const AnonAsk = (() => {
 })();
 
 const date = new Date();
-document.querySelector('.copyright').innerHTML += `<br> Copyright © ${date.getFullYear()} 半秋. All rights reserved.`;
+document.querySelector('.copyright').innerHTML += `<br> Copyright © ${date.getFullYear()} 半秋 & 迷雾. All rights reserved.`;

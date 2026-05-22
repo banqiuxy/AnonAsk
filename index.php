@@ -126,6 +126,7 @@ if ($isLoggedIn) {
         <div class="nav-inner">
             <a href="/" class="nav-logo" style="text-decoration:none">AnonAsk</a>
             <div class="nav-links">
+                <a href="/pages/download.php" class="nav-link">📥 下载客户端</a>
                 <?php if ($isLoggedIn): ?>
                     <a href="/u.php?uid=<?= $uid ?>" class="nav-link" target="_blank">🔗 我的链接</a>
                     <a href="/pages/dashboard.php" class="nav-link">📋 收件箱</a>
@@ -138,7 +139,7 @@ if ($isLoggedIn) {
     </nav>
 
     <div class="hero">
-        <div class="hero-badge">🔒 完全匿名</div>
+        <div class="hero-badge">🔒 AnonAsk</div>
         <h1>向我提问，<br>我来回答。</h1>
         <p>注册后获得个人链接，分享到朋友圈。<br>别人登录后向你提问，你在收件箱里回答。前端完全匿名。</p>
         <div style="margin-top:1.5rem">
@@ -148,6 +149,7 @@ if ($isLoggedIn) {
             <?php else: ?>
                 <a href="/pages/login.php" class="btn btn-primary">注册 / 登录</a>
             <?php endif; ?>
+            <a href="/pages/download.php" class="btn btn-outline" style="margin-left:0.5rem">📥 下载客户端</a>
         </div>
     </div>
 
