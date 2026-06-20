@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- MD3 Primary palette -->
+    <color name="md_primary">#FF7C4DFF</color>
+    <color name="md_on_primary">#FFFFFFFF</color>
+    <color name="md_primary_container">#FFE9DDFF</color>
+    <color name="md_on_primary_container">#FF21005D</color>
+
+    <!-- MD3 Secondary -->
+    <color name="md_secondary">#FF625B71</color>
+    <color name="md_on_secondary">#FFFFFFFF</color>
+    <color name="md_secondary_container">#FFE8DEF8</color>
+    <color name="md_on_secondary_container">#FF1D192B</color>
+
+    <!-- MD3 Surface / Background -->
+    <color name="md_surface">#FFFFFBFE</color>
+    <color name="md_on_surface">#FF1C1B1F</color>
+    <color name="md_surface_variant">#FFE7E0EC</color>
+    <color name="md_on_surface_variant">#FF49454F</color>
+    <color name="md_background">#FFF9F5FF</color>
+
+    <!-- MD3 Outline -->
+    <color name="md_outline">#FF79747E</color>
+    <color name="md_outline_variant">#FFCAC4D0</color>
+
+    <!-- MD3 Error -->
+    <color name="md_error">#FFB3261E</color>
+    <color name="md_on_error">#FFFFFFFF</color>
+
+    <!-- Legacy (保持兼容) -->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- App specific -->
+    <color name="pending_orange">#FFE67E22</color>
+    <color name="answered_green">#FF27AE60</color>
+    <color name="error_red">#FFE74C3C</color>
+    <color name="gradient_start">#FF1F1A3A</color>
+    <color name="gradient_mid">#FF5A3EC8</color>
+    <color name="gradient_end">#FFB77CFF</color>
+
+    <!-- Navigation bar -->
+    <color name="nav_background">#BFFFFFFF</color>
+</resources>

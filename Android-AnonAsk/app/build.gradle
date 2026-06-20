@@ -1,0 +1,77 @@
+plugins {
+    alias(libs.plugins.android.application)
+}
+
+android {
+    namespace 'com.banqiu.anonask'
+    compileSdk 37
+
+    defaultConfig {
+        applicationId "com.banqiu.anonask"
+        minSdk 29
+        targetSdk 36
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        // API 后端地址 — 修改这里指向你的 PHP 服务器
+        buildConfigField "String", "API_BASE_URL", "\"http://anonask.banqiuxy.top/\""
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    buildFeatures {
+        viewBinding = true
+        buildConfig = true
+    }
+}
+
+dependencies {
+    // AndroidX Core
+    implementation libs.appcompat
+    implementation libs.activity
+    implementation libs.core.splashscreen
+
+    // Material 3 (MD3)
+    implementation libs.material
+
+    // ConstraintLayout
+    implementation libs.constraintlayout
+
+    // RecyclerView
+    implementation libs.recyclerview
+
+    // ViewPager2
+    implementation libs.viewpager2
+
+    // Navigation
+    implementation libs.navigation.fragment
+    implementation libs.navigation.ui
+
+    // Lifecycle
+    implementation libs.lifecycle.viewmodel
+    implementation libs.lifecycle.livedata
+
+    // Retrofit + OkHttp
+    implementation libs.retrofit
+    implementation libs.retrofit.gson
+    implementation libs.okhttp
+    implementation libs.okhttp.logging
+
+    // SwipeRefreshLayout
+    implementation libs.swiperefreshlayout
+
+    // Test
+    testImplementation libs.junit
+    androidTestImplementation libs.espresso.core
+    androidTestImplementation libs.ext.junit
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline';">
+  <title>设置</title>
+  <link rel="stylesheet" href="settings.css">
+</head>
+<body>
+  <!-- 标题栏 (拖动区) -->
+  <div class="title-bar">
+    <div class="title-bar-drag">
+      <span id="settingsTitle" class="title-text">⚙ 设置</span>
+    </div>
+    <button id="btnClose" class="close-btn" title="关闭">
+      <svg viewBox="0 0 24 24" width="18" height="18">
+        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" fill="currentColor"/>
+      </svg>
+    </button>
+  </div>
+
+  <!-- 内容区域 -->
+  <div class="settings-content">
+    <!-- 主题选择 -->
+    <section class="settings-section">
+      <h2 id="sectionTheme" class="section-title">🎨 主题风格</h2>
+      <div class="theme-grid" id="themeGrid">
+        <div class="theme-card" data-theme="light">
+          <div class="theme-preview theme-light">
+            <div class="preview-nav"></div>
+            <div class="preview-content">
+              <div class="preview-line"></div>
+              <div class="preview-line short"></div>
+            </div>
+          </div>
+          <span id="themeLabelLight" class="theme-label">极光白</span>
+        </div>
+        <div class="theme-card" data-theme="dark">
+          <div class="theme-preview theme-dark">
+            <div class="preview-nav"></div>
+            <div class="preview-content">
+              <div class="preview-line"></div>
+              <div class="preview-line short"></div>
+            </div>
+          </div>
+          <span id="themeLabelDark" class="theme-label">暗夜黑</span>
+        </div>
+        <div class="theme-card" data-theme="blue">
+          <div class="theme-preview theme-blue">
+            <div class="preview-nav"></div>
+            <div class="preview-content">
+              <div class="preview-line"></div>
+              <div class="preview-line short"></div>
+            </div>
+          </div>
+          <span id="themeLabelBlue" class="theme-label">星河蓝</span>
+        </div>
+        <div class="theme-card" data-theme="purple">
+          <div class="theme-preview theme-purple">
+            <div class="preview-nav"></div>
+            <div class="preview-content">
+              <div class="preview-line"></div>
+              <div class="preview-line short"></div>
+            </div>
+          </div>
+          <span id="themeLabelPurple" class="theme-label">幻境紫</span>
+        </div>
+        <div class="theme-card" data-theme="pink">
+          <div class="theme-preview theme-pink">
+            <div class="preview-nav"></div>
+            <div class="preview-content">
+              <div class="preview-line"></div>
+              <div class="preview-line short"></div>
+            </div>
+          </div>
+          <span id="themeLabelPink" class="theme-label">樱花粉</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 语言切换 -->
+    <section class="settings-section">
+      <h2 id="sectionLang" class="section-title">🌐 语言 / Language</h2>
+      <div class="language-selector">
+        <button class="lang-btn" data-lang="zh">
+          <span class="lang-flag">🇨🇳</span>
+          <span class="lang-name">中文</span>
+          <span class="lang-check">✓</span>
+        </button>
+        <button class="lang-btn" data-lang="en">
+          <span class="lang-flag">🇺🇸</span>
+          <span class="lang-name">English</span>
+          <span class="lang-check">✓</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- 关于 -->
+    <section class="settings-section about-section">
+      <h2 id="sectionAbout" class="section-title">ℹ️ 关于</h2>
+      <div class="about-info">
+        <div class="about-row">
+          <span id="aboutApp" class="about-label">应用</span>
+          <span class="about-value">半岛球鞋浏览器</span>
+        </div>
+        <div class="about-row">
+          <span id="aboutVer" class="about-label">版本</span>
+          <span class="about-value">1.0.0</span>
+        </div>
+        <div class="about-row">
+          <span class="about-label">目标网站</span>
+          <span class="about-value accent">banqiuxy.top</span>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="settings.js"></script>
+</body>
+</html>

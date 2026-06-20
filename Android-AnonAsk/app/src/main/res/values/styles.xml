@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Toolbar 标题样式-->
+    <style name="TextAppearance.AnonAsk.ToolbarTitle" parent="TextAppearance.Material3.HeadlineMedium">
+        <item name="android:textColor">@color/md_primary</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.AnonAsk.HeroTitle" parent="TextAppearance.Material3.HeadlineLarge">
+        <item name="android:textStyle">bold</item>
+        <item name="android:lineSpacingExtra">4dp</item>
+    </style>
+</resources>

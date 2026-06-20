@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/md_background"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/nav_background"
+        app:title="@string/inbox_title"
+        app:titleTextAppearance="@style/TextAppearance.AnonAsk.ToolbarTitle" />
+
+    <LinearLayout
+        android:id="@+id/userBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="12dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/inbox_title"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/userInfoText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:textColor="#FF888888"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/copyLinkBtn"
+            style="@style/Widget.Material3.Button.TonalButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/copy_link"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <!-- 筛选 Tab -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="16dp"
+        android:paddingBottom="8dp">
+
+        <LinearLayout
+            android:id="@+id/filterTabs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <TextView
+                android:id="@+id/filterAll"
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/filter_tab_active"
+                android:gravity="center"
+                android:paddingHorizontal="16dp"
+                android:text="@string/filter_all"
+                android:textColor="@color/md_primary"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/filterPending"
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/filter_tab_inactive"
+                android:gravity="center"
+                android:paddingHorizontal="16dp"
+                android:text="@string/filter_pending"
+                android:textColor="#FF666666"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/filterAnswered"
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:background="@drawable/filter_tab_inactive"
+                android:gravity="center"
+                android:paddingHorizontal="16dp"
+                android:text="@string/filter_answered"
+                android:textColor="#FF666666"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <!-- 问题列表 -->
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/questionList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingBottom="80dp"
+            android:paddingHorizontal="16dp"
+            android:paddingTop="4dp" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <!-- 底部加载中指示器 -->
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:visibility="gone"
+        android:indeterminate="true" />
+
+</LinearLayout>
